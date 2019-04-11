@@ -24,6 +24,7 @@
             </exclusions>
         </dependency>
 
+
         <!--通用Mapper插件-->
         <dependency>
             <groupId>tk.mybatis</groupId>

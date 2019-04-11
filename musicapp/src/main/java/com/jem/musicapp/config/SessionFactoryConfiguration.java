@@ -17,12 +17,12 @@ import java.io.IOException;
 @SpringBootConfiguration
 public class SessionFactoryConfiguration {
 
-	@Value("${mybatis.config.path}")
-	private String myBatisConfigPath;
-	@Value("${mapper.xml.config.path}")
-	private String mapperXMLConfigPath;
-	@Value("${mapper.package.path}")
-	private String mapperPackagePath;
+//	@Value("${mybatis.config.path}")
+//	private String myBatisConfigPath;
+//	@Value("${mapper.xml.config.path}")
+//	private String mapperXMLConfigPath;
+//	@Value("${mapper.package.path}")
+//	private String mapperPackagePath;
 	@Autowired
 	private DataSource dataSource;
 
@@ -30,16 +30,16 @@ public class SessionFactoryConfiguration {
 	public SqlSessionFactoryBean createSqlSessionFactory() throws IOException {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		String packageXMLConfigPath = PathMatchingResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + mapperXMLConfigPath;
+//		String packageXMLConfigPath = PathMatchingResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + mapperXMLConfigPath;
 
 		// 设置MyBatis 配置文件的路径
-		sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(myBatisConfigPath));
-		// 设置mapper 对应的XML 文件的路径
-		sqlSessionFactoryBean.setMapperLocations(resolver.getResources(packageXMLConfigPath));
-		// 设置数据源
+//		sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(myBatisConfigPath));
+//		// 设置mapper 对应的XML 文件的路径
+//		sqlSessionFactoryBean.setMapperLocations(resolver.getResources(packageXMLConfigPath));
+//		// 设置数据源
 		sqlSessionFactoryBean.setDataSource(dataSource);
-		// 设置mapper 接口所在的包
-		sqlSessionFactoryBean.setTypeAliasesPackage(mapperPackagePath);
+//		// 设置mapper 接口所在的包
+//		sqlSessionFactoryBean.setTypeAliasesPackage(mapperPackagePath);
 
 		return sqlSessionFactoryBean;
 	}

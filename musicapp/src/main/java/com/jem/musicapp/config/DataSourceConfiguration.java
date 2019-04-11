@@ -4,6 +4,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
@@ -13,7 +14,7 @@ import java.sql.SQLException;
  * Created by Jem on 2019/4/10 21:48
  */
 
-@MapperScan("com.zzf.mapper")
+@MapperScan("com.jem.musicservice.mapper")
 @SpringBootConfiguration
 public class DataSourceConfiguration {
 

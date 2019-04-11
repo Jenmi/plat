@@ -1,4 +1,4 @@
-package com.jem.musicservice.mapper;
+package com.jem.musicservice;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

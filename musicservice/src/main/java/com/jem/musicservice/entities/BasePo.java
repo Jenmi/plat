@@ -1,4 +1,4 @@
-package com.jem.musicservice.po;
+package com.jem.musicservice.entities;
 
 import lombok.Data;
 
